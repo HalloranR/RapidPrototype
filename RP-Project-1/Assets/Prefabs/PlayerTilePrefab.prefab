@@ -12,10 +12,10 @@ GameObject:
   - component: {fileID: 6547498384698051669}
   - component: {fileID: 6547498384698051666}
   - component: {fileID: 6547498384698051667}
-  - component: {fileID: 7394703595550671361}
+  - component: {fileID: -6840281880766116893}
   m_Layer: 0
-  m_Name: TilePrefab
-  m_TagString: normTile
+  m_Name: PlayerTilePrefab
+  m_TagString: playerTIle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -61,8 +61,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: d0e76c51c09541f4a918819481d302bf, type: 2}
-  - {fileID: 0}
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -97,7 +96,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &7394703595550671361
+--- !u!114 &-6840281880766116893
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -106,8 +105,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 6547498384698051665}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: df4cd516c0f15924f8c914d187e4ab3f, type: 3}
+  m_Script: {fileID: 11500000, guid: 92aa81ee7ff7bea44a21522b5d5f133b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  normal: {fileID: 2100000, guid: d0e76c51c09541f4a918819481d302bf, type: 2}
-  target: {fileID: 2100000, guid: 39f8912f52acd4742aa5accec096ff41, type: 2}
