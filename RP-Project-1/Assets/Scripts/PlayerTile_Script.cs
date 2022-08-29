@@ -1,18 +1,32 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PlayerTile_Script : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public int lives = 3;
 
-    // Update is called once per frame
-    void Update()
+    public Text textObject;
+    
+
+    private void OnCollisionEnter(Collision collision)
     {
-        
+        print("collided");
+        if(collision.gameObject.tag == "enemy")
+        {
+            Destroy(collision.gameObject);
+            lives -= 1;
+
+            if (lives <= 0)
+            {
+                SceneManager.LoadScene("Menu");
+            }
+            else
+            {
+                textObject.text = "Lives : " + lives;
+            }
+        }
     }
 }

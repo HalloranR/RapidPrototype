@@ -6,6 +6,7 @@ TagManager:
   tags:
   - normTile
   - playerTIle
+  - enemy
   layers:
   - Default
   - TransparentFX

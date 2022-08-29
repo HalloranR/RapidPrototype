@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class tile_script : MonoBehaviour
 {
@@ -16,7 +17,11 @@ public class tile_script : MonoBehaviour
 
     private bool extra = false;
 
-    private void Start()
+    public bool edge = false;
+
+    public Text textbox;
+
+    private void Awake()
     {
         meshRenderer = GetComponent<MeshRenderer>();
 
@@ -33,11 +38,11 @@ public class tile_script : MonoBehaviour
 
     public IEnumerator wait()
     {
-        print("Here");
         yield return new WaitForSeconds(waitTime);
 
         if (extra) 
         { 
+            textbox.text = "Long Hole: Active";
             rayScript.hold = false;
         }
 
@@ -58,20 +63,27 @@ public class tile_script : MonoBehaviour
 
     public void turnOffTile()
     {
-        meshRenderer.enabled = false;
-        box.enabled = false;
+        if (!edge)
+        {
+            meshRenderer.enabled = false;
+            box.enabled = false;
 
-        waitTime = 2;
+            waitTime = 2;
+        }
     }
 
     public void turnOffTileLong()
     {
-        rayScript.hold = true;
-        extra = true;
+        if (!edge)
+        {
+            textbox.text = "Long Hole: Inactive";
+            rayScript.hold = true;
+            extra = true;
 
-        meshRenderer.enabled = false;
-        box.enabled = false;
+            meshRenderer.enabled = false;
+            box.enabled = false;
 
-        waitTime = 8;
+            waitTime = 8;
+        }
     }
 }
