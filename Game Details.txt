@@ -1,0 +1,15 @@
+Theme of the Game: One Button
+
+Our game aproaches the theme by taking it literally. 
+The player has one button (left mouse) to use in order to defeat the oncoming enemies
+I played around with having different states your tile deletions can be so I added the long deletion
+
+Controls
+	- Use mouse to look around
+	- No movement use the ray to aim the camera at tiles
+	- by pressing left mouse button you can delete a tile
+	- The first tile you delete will be gone for 8 seconds
+	- after 8 seconds the tile will respawn and the next tile you delete will last 8
+	- all other tiles will be deleted for 2 second and return after
+	- the player can not delete the tile they stand on
+	- once an enemy reaches the player's tile you lose 1 life, max 3
